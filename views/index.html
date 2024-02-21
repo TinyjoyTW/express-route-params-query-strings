@@ -1,0 +1,23 @@
+<!-- Form data is sent through a GET HTTP request
+Form methods can only be GET or POST
+The form action is set to /search - when SEARCH button is clicked, the form will make a GET request to the /search route.
+Each input’s attribute name="" gets converted into a key/property on the req.query object. In our case, the req.query will have properties city, startDate, and endDate. The value of the input will be assigned as the corresponding value. -->
+
+<form action="/search" method="GET">
+  <label>
+    City
+    <input type="text" name="city" />
+  </label>
+
+  <label>
+    Start-Date
+    <input type="date" name="startDate" />
+  </label>
+
+  <label>
+    End-Date
+    <input type="date" name="endDate" />
+  </label>
+
+  <button type="submit">SEARCH</button>
+</form>
